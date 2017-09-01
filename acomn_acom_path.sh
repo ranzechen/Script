@@ -33,7 +33,7 @@ do
 	if [ -n "$file_path_acom" ];then
 		echo ">>>>>Spark acom app"
 		for acom in $file_path_acom
-		do
+		do 
 		    size=`hadoop fs -du $acom | awk '{print$1}' | grep "[0-9]"`
 		    if [ $size -ne 0 ];then
 			    echo ">>>>>data source:"$hdfs_path$acom $time
