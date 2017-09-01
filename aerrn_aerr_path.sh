@@ -1,5 +1,6 @@
 #!/bin/bash
 #author:ranzechen
+
 #function:依次获取hdfs上/data/shoudan/日期/每个流水目录中的文件----规则:先取流水中以AERRN结尾文件，没有的话再取以AERR结尾的文件
 
 time=`date -d "2 day ago" +"%Y%m%d"`
