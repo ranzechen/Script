@@ -58,7 +58,7 @@ class MyHttpHandler(BaseHTTPRequestHandler):
                 os.system("echo" + '' + " ..........................................................................")    
             #根据表名生成所有商户报表模块
             elif "report_table" in params:
-                os.system("echo"+''+" ..........................................................................")
+                os.system("echo"+''+" .........................................................................")
                 print(">>>>>生成所有商户报表")
                 report_table=str(bytes(params["report_table"][0],'iso-8859-1'),'GBK')
                 report_table=params["report_table"][0] if "report_table" in params else None
