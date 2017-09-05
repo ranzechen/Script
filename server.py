@@ -36,7 +36,7 @@ class MyHttpHandler(BaseHTTPRequestHandler):
                 self.send_header("Content-Length", str(len(in_encoded)))
                 self.end_headers()
                 shutil.copyfileobj(f, self.wfile)
-                os.system("echo" + '' + " ..........................................................................")
+                os.system("echo" + '' + " .........................................................................")
             elif "ygbx_es_type" in params:
                 ygbx_es_type = str(bytes(params["ygbx_es_type"][0], 'iso-8859-1'), 'GBK')
                 ygbx_es_type = params["ygbx_es_type"][0]
