@@ -572,5 +572,5 @@ class ThreadingHttpServer(ThreadingMixIn, HTTPServer):
     pass
 if __name__ == '__main__':
     httpd = ThreadingHttpServer(('10.117.0.217', 9999), ServerForYBS)
-    print("server start on .....")
+    print("server start on ......")
     httpd.serve_forever()
