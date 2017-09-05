@@ -176,7 +176,7 @@ class ServerForYBS(BaseHTTPRequestHandler):
                 self.ErrorParameters()               
         else:
             self.ErrorParameters()
-
+ 
 # Function_1: Query ES Data
     def QueryEs(self,esIndex,esType,ES_IP_PORT):
         esQueryRes=os.popen("curl -XGET http://"+ ES_IP_PORT +"/_search -d'{" + "\"from\"" + ":0," + "\"size\"" + ":0," + "\"query\"" + ":{" + "\"bool\"" + ":{" + "\"must\"" + ":[{" + "\"match\"" + ":{" + "\"_index\"" + ":" + "\"" + esIndex + "\"" + "}},{" + "\"match\"" + ":{" + "\"_type\"" + ":" + "\"" + esType + "\"" + "}},{" + "\"match\"" + ":{" + "\"sett_flag\"" + ":" + "\"1\"" + "}}]}}," + "\"aggs\"" + ":{" + "\"intraday_return\"" + ":{" + "\"sum\"" + ":{" + "\"field\"" + ":" + "\"tftxmony\"" + "}}}}'").read().strip('\n')        
